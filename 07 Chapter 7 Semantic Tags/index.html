@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic HTML</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <!-- For info on semantic HTML tags, see https://www.w3schools.com/html/html5_semantic_elements.asp 
+
+    semantic HTML is preferred over using divs and spans as both have no semantic meaning 
+     
+    -->
+
+    <body>
+      <!-- HTML header tag: https://www.w3schools.com/tags/tag_header.asp -->
+      <header>
+        <h1>My Goals for the Year</h1>
+
+        <!-- more on accessability labels here https://www.w3schools.com/accessibility/accessibility_labels.php -->
+        <nav aria-label="primary-navigation">
+          <ul>
+            <li>
+              <a href="#html">Learning HTML</a>
+            </li>
+            <li>
+              <a href="#vacation">Planning a vacation</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- HTML main tag: https://www.w3schools.com/tags/tag_main.asp -->
+      <main>
+        <!-- HTML article tag https://www.w3schools.com/tags/tag_article.asp -->
+        <article id="html">
+          <h2>I'm Ready to Learn HTML</h2>
+          <p>This is my first web page.</p>
+          <!-- HTML section tag https://www.w3schools.com/tags/tag_section.asp -->
+          <section>
+            <h3>HTML5</h3>
+          
+          <img
+            src="./img/html_logo_300x300.png"
+            alt="HTML5 Logo"
+            title="I am learning HTML5"
+            width="300"
+            height="300"
+          />
+          <figure>
+            <figcaption>An Example of HTML5 code</figcaption>
+            <p>
+              <!-- For more info on HTML code tag, see https://www.w3schools.com/Tags/tag_code.asp -->
+              <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
+            </p>
+          </figure>
+        </section>
+        <section>
+          <h3>My Daily Schedule</h3>
+          <p>Let me tell you how I...</p>
+          <ol>
+            <li>...I learn more about web dev.</li>
+            <li>...I plan out my schedule.</li>
+            <li>
+              ...I use resources from
+              <!-- add a link here -->
+              <abbr title="Mozilla Developer Network">
+                <a href="https://developer.mozilla.org/en-US/">MDN</a></abbr
+              >.
+            </li>
+          </ol>
+
+          <!-- for more info on the aside tag, see https://www.w3schools.com/tags/tag_aside.asp -->
+          <aside>
+            <!-- details HTML tag https://www.w3schools.com/tags/tag_details.asp -->
+            <details>
+              <!-- summary HTML tag https://www.w3schools.com/tags/tag_summary.asp 
+               
+              HTML time tag https://www.w3schools.com/tags/tag_time.asp
+              
+              HTML mark tag https://www.w3schools.com/tags/tag_mark.asp 
+              -->
+              <summary>Guess the <mark>number of hours</mark> I code per day</summary>
+              <p>I start at <time datetime="08:00">8 am</time> and I write code for <time datetime="PT3H">3 hours</time> every morning.</p>
+            </details>
+          </aside>
+        </section>
+        <article/>
+
+        <article id="vacation">
+          <h2>I Am Also Planning a Vacation</h2>
+          <p>I've been working hard and <em>really need a getaway</em>.</p>
+          <p>
+            I live in <abbr title="Kansas">KS</abbr> so I want to visit a beach.
+          </p>
+
+          <section>
+          <h3>Places I'd Like to Visit</h3>
+          <ul>
+            <li>
+              <p>I've heard good things about the Carribean.</p>
+              <!-- Use loading="lazy" for images below the fold as a performance technique-->
+              <figure>
+                <!--See this link for info on figure tag https://www.w3schools.com/Tags/tag_figure.asp#:~:text=Definition%20and%20Usage,the%20flow%20of%20the%20document. -->
+                <img
+                  src="./img/caribbean.jpg"
+                  alt="Carribean Beach"
+                  title="I want to visit a Carribean beach."
+                  width="400"
+                  height="225"
+                  loading="lazy"
+                />
+                <!-- using a figcaption is better than putting a paragraph below an image, as it now unites the caption and the image -->
+                <figcaption></figcaption>
+              </figure>
+            </li>
+            <li>
+              <p>I've heard good things about going here:</p>
+              <address>
+                Margaritaville Island Reserve Riveira Cancún <br />
+                Bahia Petempich Puerto Morelos, Mexico <br />
+                Colonia Morelos, Mexico 77580
+              </address>
+              <figure>
+                <img
+                  src="img/vacation.jpg"
+                  alt="Cancun Vacation"
+                  title="It's 5 o'Clock Somewhere!"
+                  width="400"
+                  height="267"
+                  loading="lazy"
+                />
+                <figcaption>A Carribean Vacation Image</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </section>
+        
+
+        <hr />
+
+        <section id="avoid">
+          <h3>Places I Want to Avoid</h3>
+          <dl>
+            <dt>North Pole</dt>
+            <dd>I hear this is <strong>cold</strong>!</dd>
+
+            <dt>South Pole</dt>
+            <dd>This is also cold.</dd>
+
+            <dt>Mountain Tops</dt>
+            <dd>These are also cold.</dd>
+          </dl>
+        </section>
+        <article/>
+      </main>
+      <hr>
+      <ul>
+        <li>Download an <a href="html5.png" download>HTML 5 favicon</a></li>
+
+        <li>
+          Contact me at <a href="mailto_random@email.com">My email address</a>.
+        </li>
+
+        <li>Dial <a href="tel+1234567890">my phone number</a></li>
+
+        <li>
+          Open <a href="https://www.google.com" target="_blank">Google</a> in a
+          new tab.
+        </li>
+      </ul>
+
+      <hr />
+      <footer>
+        <p>&lt;&lt;&lt; <a href="about.html">Eric van Rees</a> &gt;&gt;&gt;</p>
+      </footer>
+
+      <p>
+        <a href="#">Back to Top</a>
+      </p>
+    </body>
+  </body>
+</html>
